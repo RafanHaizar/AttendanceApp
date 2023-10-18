@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:id="@+id/toolbar" android:background="@color/toolbar" android:layout_width="match_parent" android:layout_height="60dp" android:foregroundGravity="center" app:layout_anchorGravity="11">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_gravity="center" android:id="@+id/back" android:layout_width="20dp" android:layout_height="40dp" android:layout_marginLeft="20dp" android:tint="@color/Present" android:layout_weight="1" android:foregroundGravity="left" app:srcCompat="@drawable/baseline_arrow_back_24"/>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="12">
+            <TextView android:textSize="16sp" android:textColor="@color/toolbartheme" android:gravity="center" android:layout_gravity="center" android:id="@+id/title_tool" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Title" android:foregroundGravity="center"/>
+            <TextView android:textColor="@color/Present" android:gravity="center" android:layout_gravity="center" android:id="@+id/section_tool" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Section:" android:shadowColor="#000000" android:foregroundGravity="center"/>
+        </LinearLayout>
+        <ImageView android:layout_gravity="center" android:id="@+id/save" android:layout_width="60dp" android:layout_height="40dp" android:tint="@color/Present" android:layout_weight="1" app:srcCompat="@drawable/baseline_save_24"/>
+    </LinearLayout>
+</LinearLayout>

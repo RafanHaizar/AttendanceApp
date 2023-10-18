@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE hyphenation-info SYSTEM "hyphenation.dtd">
+<!--
+  Copyright 2002-2004 The Apache Software Foundation
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!-- $Id: pt.xml,v 1.6 2004/02/27 18:41:09 jeremias Exp $ -->
+<!--
+   Tabela de hifena��o FOP para o portugu�s. / FOP hyphenation table for Portuguese
+   vers�o / version 1.0    (2002-07-01)
+
+   Escrito por / Written by:
+   	Marcelo Jaccoud Amaral (jaccoud@petrobras.com.br).
+   Com a colabora��o de / With the help of:
+   	Ingrid Alexandra Zech (ingrid@cenpes.petrobras.com.br)
+
+   A hifeniza��o em portugu�s � simples e bem regular, pois se faz pela soletra��o e
+   n�o com base etimol�gica. So h� problemas quando a orto�pia � d�bia.
+   Estas regras funcionam para o portugu�s brasileiro ou o lusitano, mas n�o
+   leva em conta as novas regras em pauta no iminente acordo ortogr�fico acertado
+   mas n�o efetivado de 1998. Revisemo-las ent�o se necess�rio.
+   Note-se que nem todos os h�fens possiveis s�o validados pelo algoritmo. Por
+   exemplo, i-ta-� nunca ser� hifenado pois as regras de leiaute reprimem letras
+   �rf�s seja antes ou ap�s o ponto de separa��o.
+
+   Hyphenation in Portuguese is simple and fairly regular, since it is based only in
+   spelling and not on etymological roots. The only problems arise from ambiguous
+   pronunciation. These rules are valid for both Portugal and Brazil ortographies, but
+   does not account for the forthcoming ortography reform and unification approved in
+   1998. This file may require maintenance when the new ortography is estabilished.
+   Note that not every possible hyphen is validated by the algorithm. For example,
+   i-ta-� never gets hyphenated because the layout rules avoid orphan letters
+   after or before the hyphenation point.
+
+   Bibliografia / Bibliography:
+   Domingos Paschoal Segalla:
+      Nov�ssima Gram�tica da L�ngua Portuguesa (36� edi��o) - Editora Nacional
+   Aur�lio Buarque de Holanda Ferreira:
+      Novo Dicion�rio Aur�lio da L�ngua Portuguesa: - Editora Nova Fronteira.
+
+-->
+<hyphenation-info>
+<hyphen-char value="-"/>
+<!--
+   N�o mude estes ajustes, ou o algoritmo n�o funcionar� corretamente; o portugu�s exige os
+   valores 2+2. V�rias padr�es foram simplificados assumindo que nunca haver� s�labas com
+   letras isoladas no in�cio ou fim das palavras. Por exemplo, "gno-mo" (mas "dig-no") e
+   "pneu-m�-ti-co" (mas "ap-n�ia"). /
+
+   Do not change this setting, or hyphenation will produce wrong results; Portuguese requires 2-2.
+   Several special cases assume there will never be single letters at the beginning or at the end
+   of words. For example, "gno-mo" (but "dig-no") and "pneu-m�-ti-co" (but "ap-n�ia").
+
+   ******* Aten��o! / Warning!
+
+   FOP 0.20.4 (e vers�es anteriores) possui um erro no algoritmo de hifena��o
+   que o faz interpretar erroneamente o valor do atributo after. O (d)efeito
+   faz com que o algoritmo considere sempre uma unidade a mais (3), o que
+   previne alguns h�fens na posi��o n-2. /
+
+   FOP 0.20.4 (and previous versions) have a bug in the hyphenation algorithm
+   whose effect is that the 'after' attribute is one unit higher. This prevents
+   some valid hyphens at the end of the words to come out.
+-->
+<hyphen-min before="2" after="2"/>
+<!-- =============================CLASSES================================-->
+<classes>
+<!--
+   K, y e w n�o pertencem ao alfabeto portugu�s, mas registram-se algumas palavras derivadas
+   de nomes pr�prios, como "wagneriano". Inclu�mos alguns padr�es contendo essas letras,
+   de forma a hifen�-las de forma semelhante �s palavras 100% aportuguesadas. /
+
+   K, y and w do not belong in the Portuguese alphabet, but there are some words with them,
+   derived from foreign names, like 'kafkiano'. Some patterns were devised to hyphenize
+   such words in a way similar to completely transliterated words.
+-->
+<!--
+   aceita como equivalentes       / accept as equivalent:
+   o ap�strofo comum do ASCII     / the common apostrophe from ASCII (x0027)
+   as aspas simples de fechamento / the closing single quote (x2019)
+   o s�mbolo de linha simples     / the simple line symbol (x2032)
+ -->
+'&#x2019;&#x2032;
+aA
+��
+��
+��
+��
+bB
+cC
+��
+dD
+eE
+��
+��
+fF
+gG
+hH
+iI
+��
+jJ
+kK
+lL
+mM
+nN
+oO
+��
+��
+��
+pP
+qQ
+rR
+sS
+tT
+uU
+��
+��
+vV
+wW
+xX
+yY
+zZ
+</classes>
+<!-- ============================EXCEPTIONS==============================-->
+<exceptions>
+ba-hia
+dlim-dlim
+pu-dla-gem
+</exceptions>
+<!-- ============================PATTERNS================================-->
+<patterns>
+<!-- nunca hifenar nas adjac�ncias de um ap�strofo /
+      never hyphenate around apostrophes -->
+8'8
+<!--
+   vogais / vowels: 		a � � � � e � � i � o � � � u � �
+   consoantes / consonants:	b c d f g h j k l m n p q r s t v w x y z
+   Une as vogais presuntivamente � consoante precedente /
+    Stick vowels by default to the left consonant.
+-->
+1ba 1b� 1b� 1b� 1be 1b� 1b� 1bi 1b� 1bo 1b� 1b� 1b� 1bu 1b�
+1ca 1c� 1c� 1c� 1ce 1c� 1c� 1ci 1c� 1co 1c� 1c� 1c� 1cu 1c�
+1�a 1�� 1�� 1�� 1�o 1�� 1�� 1�� 1�u 1��
+1da 1d� 1d� 1d� 1de db� 1d� 1di 1d� 1do 1d� 1d� 1d� 1du 1d�
+1fa 1f� 1f� 1f� 1fe df� 1f� 1fi 1f� 1fo 1f� 1f� 1f� 1fu 1f�
+1ga 1g� 1g� 1g� 1ge dg� 1g� 1gi 1g� 1go 1g� 1g� 1g� 1gu 1g� 1g�
+.ha .h� .h� .he .h� .h� .hi .h� .ho .h� .h� .hu .h� .h� .hy
+1ja 1j� 1j� 1j� 1je dj� 1j� 1ji 1j� 1jo 1j� 1j� 1j� 1ju 1j�
+1ka 1k� 1k� 1k� 1ke 1k� 1k� 1ki 1k� 1ko 1k� 1k� 1k� 1ku 1k�
+1la 1l� 1l� 1l� 1le 1l� 1l� 1li 1l� 1lo 1l� 1l� 1l� 1lu 1l�
+1ma 1m� 1m� 1m� 1me 1m� 1m� 1mi 1m� 1mo 1m� 1m� 1m� 1mu 1m�
+1na 1n� 1n� 1n� 1ne 1n� 1n� 1ni 1n� 1no 1n� 1n� 1n� 1nu 1n�
+1pa 1p� 1p� 1p� 1pe 1p� 1p� 1pi 1p� 1po 1p� 1p� 1p� 1pu 1p�
+1qu 1q�
+1ra 1r� 1r� 1r� 1re 1r� 1r� 1ri 1r� 1ro 1r� 1r� 1r� 1ru 1r�
+1sa 1s� 1s� 1s� 1se 1s� 1s� 1si 1s� 1so 1s� 1s� 1s� 1su 1s�
+1ta 1t� 1t� 1t� 1te 1t� 1t� 1ti 1t� 1to 1t� 1t� 1t� 1tu 1t�
+1va 1v� 1v� 1v� 1ve 1v� 1v� 1vi 1v� 1vo 1v� 1v� 1v� 1vu 1v�
+1wa 1w� 1w� 1w� 1we 1w� 1w� 1wi 1w� 1wo 1w� 1w� 1w� 1wu 1w�
+1xa 1x� 1x� 1x� 1xe 1x� 1x� 1xi 1x� 1xo 1x� 1x� 1x� 1xu 1x�
+1ya 1y� 1y� 1y� 1ye 1y� 1y� 1yi 1y� 1yo 1y� 1y� 1y� 1yu 1y�
+1za 1z� 1z� 1z� 1ze 1z� 1z� 1zi 1z� 1zo 1z� 1z� 1z� 1zu 1z�
+<!--
+   Os d�grafos ch, lh e nh n�o se separam. /
+   Digraphs ch, lh and nh must never be separated.
+-->
+1c2ha 1c2h� 1c2h� 1c2h� 1c2he 1c2h� 1c2h� 1c2hi 1c2h� 1c2ho 1c2h� 1c2h� 1c2h� 1c2hu 1c2h�
+1l2ha 1l2h� 1l2h� 1l2h� 1l2he 1l2h� 1l2h� 1l2hi 1l2h� 1l2ho 1l2h� 1l2h� 1l2h� 1l2hu 1l2h�
+1n2ha 1n2h� 1n2h� 1n2h� 1n2he 1n2h� 1n2h� 1n2hi 1n2h� 1n2ho 1n2h� 1n2h� 1n2h� 1n2hu 1n2h�
+<!--
+   Encontros consonantais insepar�veis /
+   Inseparable consonantal groups.
+-->
+1b2ra 1b2r� 1b2r� 1b2r� 1b2re 1b2r� 1b2r� 1b2ri 1b2r� 1b2ro 1b2r� 1b2r� 1b2r� 1b2ru 1b2r�
+1c2ra 1c2r� 1c2r� 1c2r� 1c2re 1c2r� 1c2r� 1c2ri 1c2r� 1c2ro 1c2r� 1c2r� 1c2r� 1c2ru 1c2r�
+1d2ra 1d2r� 1d2r� 1d2r� 1d2re 1d2r� 1d2r� 1d2ri 1d2r� 1d2ro 1d2r� 1d2r� 1d2r� 1d2ru 1d2r�
+1f2ra 1f2r� 1f2r� 1f2r� 1f2re 1f2r� 1f2r� 1f2ri 1f2r� 1f2ro 1f2r� 1f2r� 1f2r� 1f2ru 1f2r�
+1g2ra 1g2r� 1g2r� 1g2r� 1g2re 1g2r� 1g2r� 1g2ri 1g2r� 1g2ro 1g2r� 1g2r� 1g2r� 1g2ru 1g2r�
+1p2ra 1p2r� 1p2r� 1p2r� 1p2re 1p2r� 1p2r� 1p2ri 1p2r� 1p2ro 1p2r� 1p2r� 1p2r� 1p2ru 1p2r�
+1t2ra 1t2r� 1t2r� 1t2r� 1t2re 1t2r� 1t2r� 1t2ri 1t2r� 1t2ro 1t2r� 1t2r� 1t2r� 1t2ru 1t2r�
+1v2ra 1v2r� 1v2r� 1v2r� 1v2re 1v2r� 1v2r� 1v2ri 1v2r� 1v2ro 1v2r� 1v2r� 1v2r� 1v2ru 1v2r�
+1b2la 1b2l� 1b2l� 1b2l� 1b2le 1b2l� 1b2l� 1b2li 1b2l� 1b2lo 1b2l� 1b2l� 1b2l� 1b2lu 1b2l�
+1c2la 1c2l� 1c2l� 1c2l� 1c2le 1c2l� 1c2l� 1c2li 1c2l� 1c2lo 1c2l� 1c2l� 1c2l� 1c2lu 1c2l�
+1f2la 1f2l� 1f2l� 1f2l� 1f2le 1f2l� 1f2l� 1f2li 1f2l� 1f2lo 1f2l� 1f2l� 1f2l� 1f2lu 1f2l�
+1g2la 1g2l� 1g2l� 1g2l� 1g2le 1g2l� 1g2l� 1g2li 1g2l� 1g2lo 1g2l� 1g2l� 1g2l� 1g2lu 1g2l�
+1p2la 1p2l� 1p2l� 1p2l� 1p2le 1p2l� 1p2l� 1p2li 1p2l� 1p2lo 1p2l� 1p2l� 1p2l� 1p2lu 1p2l�
+1t2la 1t2l� 1t2l� 1t2l� 1t2le 1t2l� 1t2l� 1t2li 1t2l� 1t2lo 1t2l� 1t2l� 1t2l� 1t2lu 1t2l�
+<!--
+   Ditongos e hiatos / Diphtongs and hiatus.
+-->
+<!-- grupos simples / simple groups -->
+a1a a1� a1� a1� a1e a1� a1� a2i a1� a1o a1� a1� a1� a2u a1�
+�1a �1e �2i �1o �2u �1e �2e2s �2i �2o �2os
+e1a e1� e1� e1� e1e e1� e1� e2i e1� e1o e1� e1� e2u e1� �2i �1o �2u �1e �2i �1o
+i1a i1� i1� i1� i1e i1� i1� i1i i1� i1o i1� i1� i1� i2u i1� �1a �1e �1i �1o �1u
+o1a o1� o1� o1� o1e o1� o1� o2i o3i3n2h o1� o1o o1� o1� o1� o2u o1�
+�2i �1o �2e
+u1a u1� u1� u1e u1� u1� u2i u1� u1o u1� u1� u1u u1� �1a �1e �1i �1o
+�2e �2� �2� �2i �2�
+<!-- hiatos nasalados por consoante / hiatus nasalized by consonant -->
+a3i2m3b a3i2n3c a3i2n3� a3i2n3d a3i2n3f a3i2n3g a3i3nh a3i2n3j a3i2n3l
+a3i2n3m a3i2m3p a3i2n3q a3i2n3r a3i2n3s a3i2n3t a3i2n3v a3i2n3x a3i2n3z
+a3u2m3b a3u2n3c a3u2n3� a3u2n3d a3u2n3f a3u2n3g a3u3nh a3u2n3j a3u2n3l
+a3u2n3m a3u2m3p a3u2n3q a3u2n3r a3u2n3s a3u2n3t a3u2n3v a3u2n3x a3u2n3z
+e3i2m3b e3i2n3c e3i2n3� e3i2n3d e3i2n3f e3i2n3g e3i3nh e3i2n3j e3i2n3l
+e3i2n3m e3i2m3p e3i2n3q e3i2n3r e3i2n3s e3i2n3t e3i2n3v e3i2n3x e3i2n3z
+e3u2m3b e3u2n3c e3u2n3� e3u2n3d e3u2n3f e3u2n3g e3u3nh e3u2n3j e3u2n3l
+e3u2n3m e3u2m3p e3u2n3q e3u2n3r e3u2n3s e3u2n3t e3u2n3v e3u2n3x e3u2n3z
+i3u2m3b i3u2n3c i3u2n3� i3u2n3d i3u2n3f i3u2n3g i3u3nh i3u2n3j i3u2n3l
+i3u2n3m i3u2m3p i3u2n3q i3u2n3r i3u2n3s i3u2n3t i3u2n3v i3u2n3x i3u2n3z
+o3i2m3b o3i2n3c o3i2n3� o3i2n3d o3i2n3f o3i2n3g o3i3nh o3i2n3j o3i2n3l
+o3i2n3m o3i2m3p o3i2n3q o3i2n3r o3i2n3s o3i2n3t o3i2n3v o3i2n3x o3i2n3z
+o3u2m3b o3u2n3c o3u2n3� o3u2n3d o3u2n3f o3u2n3g o3u3nh o3u2n3j o3u2n3l
+o3u2n3m o3u2m3p o3u2n3q o3u2n3r o3u2n3s o3u2n3t o3u2n3v o3u2n3x o3u2n3z
+u3i2m3b u3i2n3c u3i2n3� u3i2n3d u3i2n3f u3i2n3g u3i3nh u3i2n3j u3i2n3l
+u3i2n3m u3i2m3p u3i2n3q u3i2n3r u3i2n3s u3i2n3t u3i2n3v u3i2n3x u3i2n3z
+<!-- finais de formas verbais / special verb endings -->
+a3ir. a3i2r3d a3i2r3m a3i2r3t
+e3ir. e3i2r3d e3i2r3m e3i2r3t
+u3ir. u3i2r3d u3i2r3m u3i2r3t
+<!-- d�grafos / digraphs -->
+g2u2a g2u2� g2u2� g2u2e g2�2e g2u2� g2�2� g2u2i g2�2i g2u2o
+q2u2a q2u2� q2u2� q2u2e q2�2e q2u2� q2�2� q2u2i q2�2i q2u2o
+<!--
+   Tritongos / Triphthongs.
+-->
+a2i3u a2i3� a3i4u. a3o3e
+a2u3a a2u3� a2u3� a3u2e a2u3e2n a2u3� a2u3� a2u3i a2u3� a2u3o a2u3� a2u3�
+e2i3a e2i3� e2i3� e2i3an e2i3e e2i3� e2i3� e2i3en e2i3o e2i3� e2i3� e2i3on
+e2i3u e2i3� e2u3a e2u3� e2u3� e2u3an e3u2e e2u3� e2u3� e2u3en e2u3i e2u3�
+e2u3in e2u3o e2u3� e2u3� e2u3on
+i3u2a i2u3� i2u3� i2u3� i2u3an i3u2e i2u3� i2u3� i2u3en i3u2i i2u3� i2u3in
+i3u2o i2u3� i2u3� i2u3on
+o2i3a o2i3� o2i3� o2i3� o2i3an o3i2e o2i3� o2i3� o2i3en o3i2o o2i3� o2i3�
+o2i3on o3i2u o2i3� o2u3a o2u3� o2u3� o2u3� o2u3an o3u2e o2u3� o2u3� o2u3en
+o2u3i o2u3� o3u2o o2u3� o2u3�
+u2i3a u2i3� u2i3� u2i3� u2i3an u2i3e u2i3� u3i2� u2i3o u2i3� u2i3� u2i3on
+u2i3u u3i4u. u2i3�
+<!-- com d�grafos / with digraphs -->
+g4u4a4i g4u4e4i g4�4e4i g4u4�4o g4u4�4e g4u4�4e
+q4u4e4i q4�4e4i q4u4�4o q4u4�4e q4u4i4e
+<!--
+   Prefixos e grupos com orto�pia incomum. /
+   Groups with picky orthoepy.
+ -->
+d1l
+.su2b3l		<!-- [sub-l...] � a norma / is the norm -->
+.su3b4li3m	<!-- [su-bli-me] e derivativos / and derivatives -->
+.su4b5li3mi3n 	<!-- [sub-li-mi-nar] e / and [sub-li-mi-nal] -->
+
+a1l2i2e3n         <!-- a-lie-na-do, etc. -->
+.a2n1c2h2i2e1t    <!-- an-chie-ta,  etc. -->
+.a2n1s2i2e1d      <!-- an-sie-da-de, etc. -->
+d2i2e3t2�         <!-- die-t�-ti-co, etc. -->
+.h2i2e3n2a        <!-- hie-na -->
+.h2i2e1r          <!-- hie-r�-gli-fo, etc. -->
+di2o2u            <!-- radiouvinte, etc. -->
+s2o3c2i2e s2o3c2i2o s2�3c2i2o    <!-- so-cie-da-de, etc. -->
+<!-- derivados de nomes estrangeiros / some foreign derivatives -->
+.be3e2t3h2o3ven
+.bud4d3l
+.chan3d2le3r
+</patterns>
+</hyphenation-info>
+

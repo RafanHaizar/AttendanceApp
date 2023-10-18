@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="normal">#BAFFFFFF</color>
+    <color name="Present">#A0FFC3</color>
+    <color name="Absent">#FF7975</color>
+    <color name="toolbartheme">#FFFF</color>
+    <color name="toolbar"> #3b5998</color>
+    <color name="pure_insanity_toolbar"> #3b5998</color>
+</resources>

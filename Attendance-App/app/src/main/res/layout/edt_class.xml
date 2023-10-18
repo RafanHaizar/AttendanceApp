@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="378dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/dialoge"
+    android:id="@+id/title_of_classdialogedt"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title_of_classdialoge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:gravity="center"
+        android:text="Edit a Class"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/border"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/Name_classDialogedt"
+            android:layout_width="342dp"
+            android:layout_height="63dp"
+            android:layout_margin="10dp"
+            android:layout_weight="10"></Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/border"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/Section_ClassDialogedt"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_margin="10dp"
+            android:layout_weight="10"
+            android:ems="10"
+            android:hint="Enter the Section of the class"
+            android:inputType="textPersonName" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancel_classedt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn"
+            android:text="Cancel"
+            android:textColor="@color/toolbartheme" />
+
+        <Button
+            android:id="@+id/edt_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn"
+            android:text="Edit"
+            android:textColor="@color/toolbartheme" />
+    </LinearLayout>
+</LinearLayout>

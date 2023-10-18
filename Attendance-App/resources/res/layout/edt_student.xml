@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/dialoge" android:layout_width="378dp" android:layout_height="wrap_content" app:cardCornerRadius="20dp">
+    <TextView android:textSize="34sp" android:gravity="center" android:id="@+id/title_of_studentdialogedt" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="14dp" android:text="Edit a Student"/>
+    <TextView android:id="@+id/textView2" android:background="#000000" android:layout_width="match_parent" android:layout_height="2dp" android:layout_marginStart="14dp" android:layout_marginEnd="14dp"/>
+    <EditText android:id="@+id/Roll_studentdialogedt" android:layout_width="match_parent" android:layout_height="63dp" android:layout_margin="10dp" android:hint="Roll No of Student" android:ems="10" android:inputType="numberSigned"/>
+    <EditText android:id="@+id/Name_studentdialogedt" android:layout_width="match_parent" android:layout_height="63dp" android:layout_margin="10dp" android:hint="Name of Student" android:ems="10" android:inputType="textPersonName"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+        <Button android:textColor="@color/toolbartheme" android:id="@+id/cancel_studentedt" android:background="@drawable/btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="20dp" android:text="Cancel" android:layout_weight="1"/>
+        <Button android:textColor="@color/toolbartheme" android:id="@+id/edt_student" android:background="@drawable/btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="20dp" android:text="Edit" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>
