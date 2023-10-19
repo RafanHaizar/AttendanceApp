@@ -26,8 +26,8 @@ Welcome to the Attendance App repository! This Android application simplifies th
 
 
 
-![Screenshot 1](https://raw.githubusercontent.com/RafanHaizar/AttendanceApp/main/Screenshot%202023-10-17%20220940.png)
-![Screenshot 2](https://raw.githubusercontent.com/RafanHaizar/AttendanceApp/main/Screenshot%202023-10-17%20220857.png)
-![Screenshot 3](https://raw.githubusercontent.com/RafanHaizar/AttendanceApp/main/Screenshot%202023-10-17%20220833.png)
+![Screenshot 1](https://raw.githubusercontent.com/RafanHaizar/Attendance-App/main/Screenshot%202023-10-17%20220940.png)
+![Screenshot 2](https://raw.githubusercontent.com/RafanHaizar/Attendance-App/main/Screenshot%202023-10-17%20220857.png)
+![Screenshot 3](https://raw.githubusercontent.com/RafanHaizar/Attendance-App/main/Screenshot%202023-10-17%20220833.png)
 
 
