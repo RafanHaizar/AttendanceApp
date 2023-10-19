@@ -2,7 +2,7 @@
 
 [![Version - Delta 1.0.5](https://img.shields.io/badge/Version-Delta_1.0.5-FF0000)](https://)
 [![App Name - Attendance](https://img.shields.io/badge/App_Name-Attendance-00FFBC)](https://)
-[![License - MIT](https://img.shields.io/badge/License-MIT-blue)](https://raw.githubusercontent.com/RafanHaizar/Attendance-App/main/LICENSE)
+[![License - MIT](https://img.shields.io/badge/License-MIT-blue)](https://raw.githubusercontent.com/RafanHaizar/AttendanceApp/main/LICENSE)
 [![Lines of Code - 8544](https://img.shields.io/badge/Lines_of_Code-8544-orange)](https://)
 
 <hr>
