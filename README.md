@@ -19,7 +19,7 @@ Welcome to the Attendance App repository! This Android application simplifies th
 
 ## Downloads
 
-   - **Download the apk file by the drive link [here](https://drive.google.com/file/d/1QiUyjnyxDeF3TsNuKR2uW8W1dU1gN47S/view?usp=sharing)**
+   - **Download the apk file by the drive link [here](https://drive.google.com/file/d/10vR4jbNX0zP7sSHfgUJq9O7m3OYjoJaR/view?usp=share_link)**
    - **Download the source code by the drive link [here](https://drive.google.com/drive/folders/1VeR3yZOWpbaMeiGFFb2PUdtnDCqEezWX?usp=sharing)**
 
 ## Screenshots
